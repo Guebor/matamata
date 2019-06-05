@@ -9,6 +9,12 @@ public class Usuario {
 	
 	private String email;
 	
+	private String senha;
+	
+	private List<Torneio> torneios = new ArrayList<Torneio>();
+	
+	
+	
 	public Usuario(String nome, String email, String senha, List<Torneio> torneios) {
 		super();
 		this.nome = nome;
@@ -27,9 +33,6 @@ public class Usuario {
 
 
 
-	private String senha;
-	
-	private List<Torneio> torneios = new ArrayList<Torneio>();
 	
 	
 	
