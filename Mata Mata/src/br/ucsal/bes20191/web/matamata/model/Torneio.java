@@ -1,25 +1,43 @@
 package br.ucsal.bes20191.web.matamata.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Torneio {
 	private String nome;
 
 	private TipoTorneioEnum tipo;
 
 	private Integer numeroParticipantes;
+	
+	private List<String> nomesParticipantes = new ArrayList<String>();
 
 	private TipoChaveamentoEnum chaveamento;
 
 	private Integer codigo;
-
-	public Torneio(String nome, TipoTorneioEnum tipo, Integer numeroParticipantes, TipoChaveamentoEnum chaveamento,
-			Integer codigo) {
+	
+	
+	public Torneio(String nome, TipoTorneioEnum tipo, Integer numeroParticipantes, List<String> nomesParticipantes,
+			TipoChaveamentoEnum chaveamento, Integer codigo) {
 		super();
 		this.nome = nome;
 		this.tipo = tipo;
 		this.numeroParticipantes = numeroParticipantes;
+		this.nomesParticipantes = nomesParticipantes;
 		this.chaveamento = chaveamento;
 		this.codigo = codigo;
 	}
+
+	public List<String> getNomesParticipantes() {
+		return nomesParticipantes;
+	}
+
+	public void setNomesParticipantes(List<String> nomesParticipantes) {
+		this.nomesParticipantes = nomesParticipantes;
+	}
+
+
+
 
 	public String getNome() {
 		return nome;
